@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>K. Haridha | ECE Student Portfolio</title>
+<meta name="description" content="Portfolio of K. Haridha, Electronics and Communication Engineering student at M. Kumarasamy College of Engineering, open to internship and placement opportunities.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1f4b'/%3E%3Ctext x='32' y='42' font-size='28' font-family='Arial' font-weight='700' text-anchor='middle' fill='%23d9d2f7'%3EKH%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0b1f4b;--navy2:#15306e;--lav:#e9e4fb;--lav2:#b9aee8;--bg:#f7f6fd;--ink:#1d2540;--mute:#5a6285;--card:#fff;--line:#e2def3;--shadow:0 10px 30px rgba(11,31,75,.08)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:Poppins,Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--lav2);outline-offset:3px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+section{padding:84px 0}
+h2{font-size:clamp(1.7rem,3.4vw,2.2rem);color:var(--navy);margin-bottom:10px;line-height:1.25}
+.sub{color:var(--mute);max-width:620px;margin-bottom:36px}
+.btn{display:inline-block;padding:12px 24px;border-radius:999px;font-weight:600;font-size:.95rem;border:2px solid var(--navy);cursor:pointer;font-family:inherit;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.pri{background:var(--navy);color:#fff}.btn.pri:hover{background:var(--navy2)}
+.btn.sec{background:transparent;color:var(--navy)}.btn.sec:hover{background:var(--lav)}
+.btn[hidden]{display:none}
+
+/* nav */
+header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(247,246,253,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-weight:700;color:var(--navy);font-size:1.15rem}
+.logo span{background:var(--navy);color:var(--lav);padding:3px 8px;border-radius:8px;margin-right:8px;font-size:.9rem}
+.links{display:flex;gap:22px;align-items:center;list-style:none;padding:0}
+.links a{font-size:.9rem;color:var(--mute);font-weight:500}
+.links a:hover{color:var(--navy)}
+.links .btn{padding:8px 18px;color:#fff}
+.menu{display:none;background:none;border:2px solid var(--navy);border-radius:10px;padding:6px 10px;font-size:1.1rem;color:var(--navy);cursor:pointer}
+
+/* hero */
+#home{padding-top:140px;background:radial-gradient(circle at 85% 20%,var(--lav) 0,transparent 45%)}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hi{color:var(--mute);font-weight:500}
+.hero h1{font-size:clamp(2.4rem,6vw,3.8rem);color:var(--navy);line-height:1.1;margin:4px 0 12px}
+.role{font-weight:600;color:var(--navy2);margin-bottom:16px}
+.hero p.intro{color:var(--mute);max-width:540px;margin-bottom:26px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.photo{position:relative;justify-self:center;width:min(340px,80%);aspect-ratio:1}
+.photo::before{content:"";position:absolute;inset:-18px;background:radial-gradient(circle,var(--lav2),transparent 68%);filter:blur(18px);opacity:.8}
+.frame{position:relative;width:100%;height:100%;border-radius:36px;overflow:hidden;background:linear-gradient(135deg,var(--navy),var(--navy2));border:6px solid #fff;box-shadow:var(--shadow);display:grid;place-items:center;color:var(--lav);font-size:4rem;font-weight:700}
+.frame img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.badge{position:absolute;left:50%;bottom:-18px;transform:translateX(-50%);background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);border-radius:999px;padding:8px 16px;font-size:.78rem;font-weight:600;color:var(--navy);white-space:nowrap;display:flex;gap:8px;align-items:center}
+.badge i{width:9px;height:9px;border-radius:50%;background:#3fb68b;display:inline-block}
+.hero-in{animation:rise .8s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+/* cards */
+.grid{display:grid;gap:20px}
+.g4{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:var(--shadow)}
+.card h3{font-size:1.02rem;color:var(--navy);margin-bottom:6px}
+.card p{color:var(--mute);font-size:.93rem}
+.ico{width:44px;height:44px;border-radius:12px;background:var(--lav);display:grid;place-items:center;margin-bottom:14px;font-size:1.3rem}
+.about p.big{max-width:760px;color:var(--ink);margin-bottom:32px}
+.tag{display:inline-block;background:var(--lav);color:var(--navy);font-size:.76rem;font-weight:500;padding:4px 11px;border-radius:999px;margin:0 6px 6px 0}
+.tag.lv{background:#fff;border:1px dashed var(--lav2);color:var(--mute)}
+
+/* timeline */
+.tl{border-left:3px solid var(--lav2);padding-left:26px;max-width:720px}
+.tl .item{position:relative;margin-bottom:22px}
+.tl .item::before{content:"";position:absolute;left:-36px;top:24px;width:15px;height:15px;border-radius:50%;background:var(--navy);border:3px solid var(--bg)}
+.tl .item.empty{opacity:.7;border-style:dashed}
+.status{display:inline-block;font-size:.74rem;font-weight:600;padding:3px 11px;border-radius:999px;margin-bottom:8px}
+.s-done{background:#dff5ec;color:#16674a}.s-dev{background:#fff0d6;color:#8a5a00}.s-now{background:var(--lav);color:var(--navy)}
+.learn{margin-top:26px}
+
+/* projects */
+.proj{display:flex;flex-direction:column;padding:0;overflow:hidden;transition:transform .25s}
+.proj:hover{transform:translateY(-4px)}
+.pimg{height:150px;background:linear-gradient(135deg,var(--navy),var(--navy2));display:grid;place-items:center;font-size:2.6rem;position:relative}
+.pimg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pbody{padding:22px;display:flex;flex-direction:column;flex:1}
+.pbody p{flex:1;margin-bottom:14px}
+.prow{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:6px}
+.prow .btn{padding:7px 16px;font-size:.84rem}
+
+/* modal */
+dialog{border:none;border-radius:22px;max-width:560px;width:calc(100% - 32px);padding:30px;box-shadow:0 24px 60px rgba(11,31,75,.3);color:var(--ink)}
+dialog::backdrop{background:rgba(11,31,75,.55)}
+dialog h3{color:var(--navy);font-size:1.3rem;margin-bottom:8px}
+dialog ul{margin:10px 0 16px 20px;color:var(--mute);font-size:.94rem}
+.note{font-size:.84rem;color:var(--mute);background:var(--lav);padding:10px 14px;border-radius:12px;margin-bottom:16px}
+
+.empty-msg{background:#fff;border:2px dashed var(--lav2);border-radius:20px;padding:34px;text-align:center;color:var(--mute)}
+.cert{display:grid;gap:20px}
+
+/* resume + contact */
+.resume{background:var(--navy);color:#fff;border-radius:28px;padding:44px 36px;display:flex;gap:24px;flex-wrap:wrap;justify-content:space-between;align-items:center}
+.resume h2{color:#fff;margin:0 0 6px}.resume p{color:#cdd3ee;max-width:460px}
+.resume .btn{border-color:var(--lav)}
+.resume .btn.pri{background:var(--lav);color:var(--navy)}
+.resume .btn.sec{color:var(--lav)}.resume .btn.sec:hover{background:rgba(255,255,255,.1)}
+.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:36px}
+.info li{list-style:none;margin-bottom:12px;color:var(--mute);font-size:.95rem}
+.info b{color:var(--navy);display:block;font-size:.85rem}
+.info a{color:var(--navy2);text-decoration:underline}
+form label{display:block;font-weight:500;font-size:.88rem;color:var(--navy);margin-bottom:14px}
+form input,form textarea{width:100%;margin-top:5px;padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;font:inherit;background:#fff;color:var(--ink)}
+form input:focus,form textarea:focus{border-color:var(--navy2);outline:none}
+.err{color:#b3261e;font-size:.8rem;display:block;min-height:1em}
+.msg{margin-top:14px;padding:12px 16px;border-radius:12px;font-size:.9rem}
+.msg.ok{background:#dff5ec;color:#16674a}.msg.bad{background:#fde6e4;color:#8c1d18}
+
+footer{background:var(--navy);color:#cdd3ee;padding:44px 0 26px;font-size:.9rem}
+.fgrid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px}
+footer a{margin-right:16px}footer a:hover{color:#fff}
+footer .copy{border-top:1px solid rgba(255,255,255,.15);margin-top:26px;padding-top:18px;font-size:.82rem}
+
+.rv{opacity:0;transform:translateY(14px);transition:opacity .6s,transform .6s}.rv.in{opacity:1;transform:none}
+
+@media(max-width:820px){
+ .hero,.contact{grid-template-columns:1fr}
+ .photo{order:-1;width:min(260px,70%);margin-bottom:12px}
+ .menu{display:block}
+ .links{position:absolute;top:68px;left:0;right:0;background:var(--bg);flex-direction:column;align-items:flex-start;padding:18px 22px;border-bottom:1px solid var(--line);display:none;gap:14px}
+ .links.open{display:flex}
+ section{padding:64px 0}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="wrap"><nav aria-label="Main">
+  <a href="#home" class="logo"><span>KH</span>K. Haridha</a>
+  <button class="menu" id="menu" aria-label="Toggle menu" aria-expanded="false">☰</button>
+  <ul class="links" id="links">
+   <li><a href="#home">Home</a></li><li><a href="#about">About Me</a></li><li><a href="#education">Education</a></li>
+   <li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li><li><a href="#achievements">Achievements</a></li><li><a href="#contact">Contact</a></li>
+   <li><a class="btn pri resume-dl" href="#resume">Download Resume</a></li>
+  </ul>
+ </nav></div>
+</header>
+
+<main>
+<section id="home"><div class="wrap hero">
+ <div class="hero-in">
+  <p class="hi">Hello, I'm</p>
+  <h1>K. Haridha</h1>
+  <p class="role">ECE Student | Aspiring Engineer | Lifelong Learner</p>
+  <p class="intro">I am a positive-minded ECE student with good communication skills and a strong interest in learning new technologies. I enjoy exploring innovative ideas, developing practical projects, and continuously improving my technical knowledge.</p>
+  <div class="cta"><a class="btn pri" href="#projects">Explore My Projects</a><a class="btn sec" href="#contact">Contact Me</a></div>
+ </div>
+ <div class="photo hero-in">
+  <div class="frame" id="frame">KH</div>
+  <div class="badge"><i></i>Open to Internship &amp; Placement Opportunities</div>
+ </div>
+</div></section>
+
+<section id="about" class="about"><div class="wrap">
+ <h2>About Me</h2>
+ <p class="big">I am K. Haridha, currently pursuing my bachelor's degree in Electronics and Communication Engineering at M. Kumarasamy College of Engineering. I am a positive-minded person with good communication skills and a willingness to learn. I am interested in expanding my technical knowledge, working on practical projects, and collaborating with others to solve problems. My goal is to begin my professional career in a reputed company, contribute to meaningful projects, and develop into a skilled engineer.</p>
+ <div class="grid g4">
+  <div class="card rv"><div class="ico">🎓</div><h3>Education</h3><p>Electronics and Communication Engineering</p></div>
+  <div class="card rv"><div class="ico">☀️</div><h3>Strength</h3><p>Positive Attitude</p></div>
+  <div class="card rv"><div class="ico">💬</div><h3>Communication</h3><p>Good Communication Skills</p></div>
+  <div class="card rv"><div class="ico">🎯</div><h3>Career Goal</h3><p>Professional Growth and Placement</p></div>
+ </div>
+</div></section>
+
+<section id="education" style="background:#fff"><div class="wrap">
+ <h2>Education</h2><p class="sub">My academic journey so far.</p>
+ <div class="tl" id="edu"></div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+ <h2>Technical Skills</h2><p class="sub">I'm building these skills step by step. Everything below is at a learning or beginner level.</p>
+ <div class="grid g4" id="skillGrid"></div>
+ <div class="card learn rv"><h3>Currently Learning</h3><div id="learning"></div></div>
+</div></section>
+
+<section id="projects" style="background:#fff"><div class="wrap">
+ <h2>Projects</h2><p class="sub">Academic and practical projects. Each one is labelled with its current status.</p>
+ <div class="grid g3" id="projGrid"></div>
+</div></section>
+
+<section id="strengths"><div class="wrap">
+ <h2>Strengths</h2><p class="sub">The qualities I bring to a team.</p>
+ <div class="grid g3" id="strGrid"></div>
+</div></section>
+
+<section id="achievements" style="background:#fff"><div class="wrap">
+ <h2>Achievements &amp; Certifications</h2><p class="sub">Academic achievements, hackathons, workshops, and courses will appear here once verified.</p>
+ <div class="cert" id="certs"></div>
+</div></section>
+
+<section id="resume"><div class="wrap">
+ <div class="resume">
+  <div><h2>My Resume</h2><p>View or download my latest resume. To replace it, save your new PDF over the file named in the settings at the top of the script.</p></div>
+  <div class="cta">
+   <a class="btn pri resume-dl" id="rdl" download>Download Resume</a>
+   <a class="btn sec" id="rpv" target="_blank" rel="noopener">Preview Resume</a>
+  </div>
+ </div>
+</div></section>
+
+<section id="contact" style="background:#fff"><div class="wrap">
+ <h2>Let's Connect</h2>
+ <p class="sub">I am always interested in learning, collaborating on innovative projects, and exploring internship and placement opportunities. Feel free to connect with me.</p>
+ <div class="contact">
+  <ul class="info card" id="info" style="padding:26px"></ul>
+  <form id="form" class="card" novalidate>
+   <label>Name<input name="name" autocomplete="name" required><span class="err"></span></label>
+   <label>Email<input name="email" type="email" autocomplete="email" required><span class="err"></span></label>
+   <label>Subject<input name="subject" required><span class="err"></span></label>
+   <label>Message<textarea name="message" rows="5" required></textarea><span class="err"></span></label>
+   <button class="btn pri" type="submit">Send Message</button>
+   <div id="status" role="status"></div>
+  </form>
+ </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+ <div class="fgrid">
+  <div><b style="color:#fff">Designed with care by K. Haridha</b></div>
+  <div><a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a><span id="fsoc"></span></div>
+ </div>
+ <p class="copy">© <span id="yr"></span> K. Haridha. All rights reserved.</p>
+</div></footer>
+
+<dialog id="dlg" aria-labelledby="dt"><h3 id="dt"></h3><div id="db"></div><button class="btn pri" onclick="document.getElementById('dlg').close()">Close</button></dialog>
+
+<script>
+/* ============ EDIT YOUR DETAILS HERE ============ */
+const SITE = {
+  photo: "",                 // e.g. "haridha.jpg" (put the file next to index.html). Empty shows the KH monogram.
+  resume: "",                // e.g. "Haridha_Resume.pdf". Empty hides the buttons until you add it.
+  email: "",                 // your real email
+  linkedin: "",              // full LinkedIn URL
+  github: "",                // full GitHub URL
+  location: "",              // optional
+  degree: "",                // confirm: "Bachelor of Engineering" or "Bachelor of Technology"
+  yearOfStudy: "",           // e.g. "Third Year"
+  higherSecondary: "",       // school name, board, year, score (fill in when ready)
+  school: ""
+};
+
+const SKILLS = {
+  "Programming Languages": ["C", "Python", "Java"],
+  "Web Development": ["HTML", "CSS", "JavaScript"],
+  "Electronics & Engineering": ["Digital Electronics", "Basic Electronic Circuits", "Microcontrollers & Embedded Systems"],
+  "Tools": ["Visual Studio Code"]   // add "Git & GitHub" only if you have used them
+};
+const ICONS = {"Programming Languages":"💻","Web Development":"🌐","Electronics & Engineering":"🔌","Tools":"🛠️"};
+const LEARNING = [];   // e.g. ["React", "Embedded C", "Arduino"]
+
+// status: "Completed" | "In Development" | "Prototype"
+const PROJECTS = [
+ { title:"Smart Blood Bank Monitoring System", icon:"🩸", image:"", status:"In Development", github:"",
+   desc:"A web-based system designed to support blood availability monitoring, donor registration, emergency blood requests, and donor coordination. It aims to simplify the process of identifying suitable donors during emergencies.",
+   features:["Donor Registration","Blood Stock Monitoring","Emergency Blood Requests","Smart Donor Matching","Notification Module"],
+   tech:["HTML","CSS","JavaScript"] },
+ { title:"AI-Based Food Allergy Detection System", icon:"🥗", image:"", status:"In Development", github:"",
+   desc:"A system designed to help users identify potential allergens in food ingredients based on their allergy profiles. It aims to provide ingredient warnings and suggest alternative food options.",
+   features:["User Allergy Profile","Ingredient Matching","Food Safety Alerts","Alternative Food Suggestions"],
+   tech:[] },
+ { title:"Smart Hearing Assistance Device", icon:"🎧", image:"", status:"Prototype", github:"",
+   desc:"A wearable electronics project designed to detect environmental sounds and provide vibration alerts to help users become aware of potentially important surrounding sounds.",
+   features:["Environmental Sound Detection","Vibration Alerts","ESP32-Based Prototype","Embedded Electronics"],
+   tech:["ESP32","Microphone module","Vibration motor"] }
+];
+
+const STRENGTHS = [
+ ["😊","Positive Attitude","I stay optimistic and look for what I can learn from every challenge."],
+ ["🗣️","Communication Skills","I explain my ideas clearly and listen carefully to others."],
+ ["📚","Willingness to Learn","I enjoy picking up new tools and concepts, one step at a time."],
+ ["🤝","Team Collaboration","I like sharing work, ideas, and feedback in group projects."],
+ ["🧩","Problem-Solving Mindset","I break problems into smaller parts and try practical solutions."],
+ ["🔄","Adaptability","I adjust quickly to new topics, teams, and situations."]
+];
+
+const ACHIEVEMENTS = [];  // e.g. { title:"Workshop on Embedded Systems", type:"Workshop", note:"2025", link:"" }  (verified items only)
+/* ============ END OF EDIT AREA ============ */
+
+const $ = s => document.querySelector(s);
+const esc = t => String(t).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const tags = (a, cls="") => a.map(t => `<span class="tag ${cls}">${esc(t)}</span>`).join("");
+
+// photo
+if (SITE.photo) $("#frame").innerHTML = `<img src="${esc(SITE.photo)}" alt="Portrait of K. Haridha" width="340" height="340" decoding="async">`;
+
+// education
+$("#edu").innerHTML = `
+ <div class="card item"><span class="status s-now">Currently Pursuing</span>
+  <h3>${esc(SITE.degree || "Bachelor's Degree (add exact title: B.E. or B.Tech)")}</h3>
+  <p>Electronics and Communication Engineering<br>M. Kumarasamy College of Engineering<br>Year of study: ${esc(SITE.yearOfStudy || "Add your current year")}</p></div>
+ <div class="card item empty"><h3>Higher Secondary</h3><p>${esc(SITE.higherSecondary || "Details to be added.")}</p></div>
+ <div class="card item empty"><h3>School</h3><p>${esc(SITE.school || "Details to be added.")}</p></div>`;
+
+// skills
+$("#skillGrid").innerHTML = Object.entries(SKILLS).map(([k,v]) =>
+ `<div class="card rv"><div class="ico">${ICONS[k]||"⚙️"}</div><h3>${esc(k)}</h3><p style="margin-bottom:10px">Beginner / learning level</p>${tags(v)}</div>`).join("");
+$("#learning").innerHTML = LEARNING.length ? tags(LEARNING,"lv") : `<p>Add the languages, frameworks, and tools you are learning in the LEARNING list.</p>`;
+
+// projects
+const sCls = s => s==="Completed" ? "s-done" : "s-dev";
+$("#projGrid").innerHTML = PROJECTS.map((p,i) => `
+ <article class="card proj rv">
+  <div class="pimg">${p.image ? `<img src="${esc(p.image)}" alt="${esc(p.title)}" loading="lazy">` : p.icon}</div>
+  <div class="pbody">
+   <span class="status ${sCls(p.status)}" style="align-self:flex-start">${esc(p.status)}</span>
+   <h3>${esc(p.title)}</h3><p>${esc(p.desc)}</p>
+   <div>${p.tech.length ? tags(p.tech) : '<span class="tag lv">Technologies to be added</span>'}</div>
+   <div class="prow"><button class="btn pri" data-i="${i}">View Details</button>${p.github ? `<a class="btn sec" href="${esc(p.github)}" target="_blank" rel="noopener">GitHub</a>` : ""}</div>
+  </div></article>`).join("");
+$("#projGrid").addEventListener("click", e => {
+  const b = e.target.closest("button[data-i]"); if(!b) return;
+  const p = PROJECTS[b.dataset.i];
+  $("#dt").textContent = p.title;
+  $("#db").innerHTML = `<span class="status ${sCls(p.status)}">${esc(p.status)}</span><p style="color:var(--mute)">${esc(p.desc)}</p>
+   <h3 style="font-size:1rem;margin-top:14px">Planned / possible features</h3><ul>${p.features.map(f=>`<li>${esc(f)}</li>`).join("")}</ul>
+   <p class="note">Features are listed as goals. Update this entry as each one is actually built.</p>`;
+  $("#dlg").showModal();
+});
+
+// strengths
+$("#strGrid").innerHTML = STRENGTHS.map(s => `<div class="card rv"><div class="ico">${s[0]}</div><h3>${s[1]}</h3><p>${s[2]}</p></div>`).join("");
+
+// achievements
+$("#certs").innerHTML = ACHIEVEMENTS.length
+ ? `<div class="grid g3">${ACHIEVEMENTS.map(a=>`<div class="card rv"><span class="tag">${esc(a.type||"Achievement")}</span><h3>${esc(a.title)}</h3><p>${esc(a.note||"")}</p>${a.link?`<p><a href="${esc(a.link)}" target="_blank" rel="noopener" style="text-decoration:underline">View certificate</a></p>`:""}</div>`).join("")}</div>`
+ : `<div class="empty-msg"><h3 style="color:var(--navy)">New learning milestones coming soon.</h3></div>`;
+
+// resume
+if (SITE.resume) { $("#rdl").href = SITE.resume; $("#rpv").href = SITE.resume; }
+else { $("#rdl").removeAttribute("download"); $("#rdl").setAttribute("href","#contact"); $("#rpv").hidden = true; }
+
+// contact info
+const rows = [];
+if (SITE.email) rows.push(`<li><b>Email</b><a href="mailto:${esc(SITE.email)}">${esc(SITE.email)}</a></li>`);
+if (SITE.linkedin) rows.push(`<li><b>LinkedIn</b><a href="${esc(SITE.linkedin)}" target="_blank" rel="noopener">${esc(SITE.linkedin)}</a></li>`);
+if (SITE.github) rows.push(`<li><b>GitHub</b><a href="${esc(SITE.github)}" target="_blank" rel="noopener">${esc(SITE.github)}</a></li>`);
+if (SITE.location) rows.push(`<li><b>Location</b>${esc(SITE.location)}</li>`);
+$("#info").innerHTML = rows.join("") || `<li>Add your email, LinkedIn, and GitHub in the SITE settings to show them here.</li>`;
+$("#fsoc").innerHTML = [SITE.linkedin&&["LinkedIn",SITE.linkedin],SITE.github&&["GitHub",SITE.github]].filter(Boolean).map(x=>`<a href="${esc(x[1])}" target="_blank" rel="noopener">${x[0]}</a>`).join("");
+
+// form (opens the visitor's email app; swap for Formspree/EmailJS for a true backend)
+$("#form").addEventListener("submit", e => {
+  e.preventDefault();
+  const f = e.target, st = $("#status"); let ok = true;
+  f.querySelectorAll("label").forEach(l => {
+    const i = l.querySelector("input,textarea"), er = l.querySelector(".err"); let m = "";
+    if (!i.value.trim()) m = "This field is required.";
+    else if (i.type==="email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(i.value)) m = "Enter a valid email address.";
+    er.textContent = m; if (m) ok = false;
+  });
+  if (!ok) { st.className="msg bad"; st.textContent="Please fix the highlighted fields and try again."; return; }
+  if (!SITE.email) { st.className="msg bad"; st.textContent="This form is a demo until an email address is added in the SITE settings."; return; }
+  const d = new FormData(f);
+  location.href = `mailto:${SITE.email}?subject=${encodeURIComponent(d.get("subject"))}&body=${encodeURIComponent(d.get("message")+"\n\nFrom: "+d.get("name")+" ("+d.get("email")+")")}`;
+  st.className="msg ok"; st.textContent="Your email app should open with the message ready to send."; f.reset();
+});
+
+// mobile menu
+const menu = $("#menu"), links = $("#links");
+menu.addEventListener("click", () => { const o = links.classList.toggle("open"); menu.setAttribute("aria-expanded", o); });
+links.addEventListener("click", e => { if (e.target.tagName==="A") { links.classList.remove("open"); menu.setAttribute("aria-expanded", false); } });
+
+// reveal on scroll + year
+$("#yr").textContent = new Date().getFullYear();
+const io = new IntersectionObserver(es => es.forEach(x => { if (x.isIntersecting) { x.target.classList.add("in"); io.unobserve(x.target); } }), {threshold:.12});
+document.querySelectorAll(".rv").forEach(el => io.observe(el));
+</script>
+</body>
+</html>
